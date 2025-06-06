@@ -1,7 +1,7 @@
 async function fetchData(state = "weekly") {
   try {
     const res = await fetch("data.json");
-    console.log(res);
+    
     const data = await res.json();
 
     document.querySelectorAll(".item").forEach((item) => {
@@ -15,7 +15,7 @@ async function fetchData(state = "weekly") {
 
       div.innerHTML = `<div>
             <div class="icon">
-            <p class="sect">${item.title}</p>
+            <p class="secct">${item.title}</p>
             <img src="./images/icon-ellipsis.svg"/>
             </div>
             <h2 class="time">${
